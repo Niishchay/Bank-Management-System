@@ -28,8 +28,7 @@ def OpenAcc():
     x.execute(sql2, data2)
     mydb.commit()
     print(f"Data is Entered Successfully your account number is {acno}")
-    main()
-
+  
 
 def DepoAmt():
     acno = input("Enter the account number: ")
