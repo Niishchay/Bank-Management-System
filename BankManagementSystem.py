@@ -28,7 +28,7 @@ def OpenAcc():
     x.execute(sql2, data2)
     mydb.commit()
     print(f"Data is Entered Successfully your account number is {acno}")
-  
+
 
 def DepoAmt():
     acno = input("Enter the account number: ")
@@ -46,7 +46,7 @@ def DepoAmt():
         sql2 = 'update amount set Balance = %s where AccNo = %s'
         x.execute(sql2, data2)
         mydb.commit()
-        print(f"{total} rupees amount credited to your account number {acno}")
+        print(f"{amount} rupees credited to your account number {acno}")
 
 
 def WithAmt():
@@ -65,7 +65,7 @@ def WithAmt():
         sql2 = 'update amount set Balance = %s where AccNo = %s'
         x.execute(sql2, data2)
         mydb.commit()
-        print(f"{total} rupees amount debited from your account number {acno}")
+        print(f"{amount} rupees amount debited from your account number {acno}")
 
 
 def BalEnq():
