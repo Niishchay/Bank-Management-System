@@ -1,35 +1,6 @@
 import mysql.connector
 import random
-mydb = mysql.connector.connect(host='localhost', user='root', password='', database='bank_management')
-
-
-def main():
-    print('''
-            1. OPEN NEW ACCOUNT
-            2. DEPOSIT AMOUNT
-            3. WITHDRAW AMOUNT
-            4. BALANCE ENQUIRY
-            5. DISPLAY CUSTOMER DETAILS
-            6. CLOSE ACCOUNT
-            7. EXIT
-            ''')
-    choice = int(input("Enter the task number you want to perform: "))
-    if choice == 1:
-        OpenAcc()
-    elif choice == 2:
-        DepoAmt()
-    elif choice == 3:
-        WithAmt()
-    elif choice == 4:
-        BalEnq()
-    elif choice == 5:
-        DisDet()
-    elif choice == 6:
-        CloseAcc()
-    elif choice == 7:
-        print("Thank you for Visiting")
-    else:
-        print("Invalid Choice!")
+mydb = mysql.connector.connect(host='localhost', user='root', password='nishchay1', database='bank_management')
 
 
 def OpenAcc():
@@ -142,5 +113,32 @@ def CloseAcc():
     mydb.commit()
     print(f"Your account number {acno} from this bank is closed")
 
+
 if __name__ == '__main__':
-    main()
+
+    print('''
+            1. OPEN NEW ACCOUNT
+            2. DEPOSIT AMOUNT
+            3. WITHDRAW AMOUNT
+            4. BALANCE ENQUIRY
+            5. DISPLAY CUSTOMER DETAILS
+            6. CLOSE ACCOUNT
+            7. EXIT
+            ''')
+    choice = int(input("Enter the task number you want to perform: "))
+    if choice == 1:
+        OpenAcc()
+    elif choice == 2:
+        DepoAmt()
+    elif choice == 3:
+        WithAmt()
+    elif choice == 4:
+        BalEnq()
+    elif choice == 5:
+        DisDet()
+    elif choice == 6:
+        CloseAcc()
+    elif choice == 7:
+        print("Thank you for Visiting")
+    else:
+        print("Invalid Choice!")
