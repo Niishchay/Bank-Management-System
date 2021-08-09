@@ -1,6 +1,6 @@
 import mysql.connector
 import random
-mydb = mysql.connector.connect(host='localhost', user='root', password='nishchay1', database='bank_management')
+mydb = mysql.connector.connect(host='localhost', user='root', password='', database='bank_management')
 
 
 def OpenAcc():
